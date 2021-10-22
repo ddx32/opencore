@@ -119,6 +119,12 @@ if __name__ == '__main__':
                     'Comment': '',
                     'Enabled': True,
                     'Path': 'OpenRuntime.efi'
+                },
+                {
+                    'Arguments': '',
+                    'Comment': '',
+                    'Enabled': True,
+                    'Path': 'ExFatDxeLegacy.efi'
                 }
             ],
             'Output': {
