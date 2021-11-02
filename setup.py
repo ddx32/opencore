@@ -9,22 +9,23 @@ if __name__ == '__main__':
         {
             'project': 'Lilu',
             'repo': 'acidanthera',
-            'version': '1.5.6'
+            'version': '1.5.7'
         },
         {
-            'project': 'FeatureUnlock',
-            'repo': 'acidanthera',
-            'version': '1.0.3'
+            'project': 'NightShiftEnabler',
+            'repo': 'cdf',
+            'version': '1.1.1'
         },
         {
             'project': 'WhateverGreen',
             'repo': 'acidanthera',
-            'version': '1.5.4'
+            'version': '1.5.5'
         }
     ]
     build.patches = [
         {
             'Base': '_early_random',
+            'Comment': 'SurPlus 1',
             'Find': build.unhexlify('00 74 23 48 8B'),
             'Identifier': 'kernel',
             'Limit': 800,
@@ -33,6 +34,7 @@ if __name__ == '__main__':
         },
         {
             'Base': '_register_and_init_prng',
+            'Comment': 'SurPlus 2',
             'Find': build.unhexlify('BA 48 01 00 00 31 F6'),
             'Identifier': 'kernel',
             'Limit': 256,
