@@ -101,6 +101,11 @@ if __name__ == '__main__':
                 'BIOSVersion': '9999.0.0.0.0',
                 'BoardProduct': 'Mac-7BA5B2D9E42DDD94'
             },
+            'PlatformNVRAM': {
+                'FirmwareFeatures': build.unhexlify('03 54 0c c0 08 00 00 00'),
+                'FirmwareFeaturesMask': build.unhexlify('3f ff 1f ff 08 00 00 00'),
+            },
+            'UpdateNVRAM': True,
             'UpdateSMBIOS': True
         },
         'UEFI': {
