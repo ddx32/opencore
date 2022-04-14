@@ -7,19 +7,28 @@ if __name__ == '__main__':
     build = OpenCoreBuild('Volumes/EFI')
     build.kexts = [
         {
-            'project': 'Lilu',
-            'repo': 'acidanthera',
-            'version': '1.5.7'
+            'project': 'ASPP-Override',
+            'properties': {
+               'ExecutablePath': '',
+               'MinKernel': '21.4.0'
+            },
+            'repo': 'dortania',
+            'version': '1.0.1'
         },
         {
-            'project': 'NightShiftEnabler',
-            'repo': 'cdf',
-            'version': '1.1.1'
+            'project': 'Lilu',
+            'repo': 'acidanthera',
+            'version': '1.6.0'
+        },
+        {
+            'project': 'FeatureUnlock',
+            'repo': 'acidanthera',
+            'version': '1.0.7'
         },
         {
             'project': 'WhateverGreen',
             'repo': 'acidanthera',
-            'version': '1.5.5'
+            'version': '1.5.8'
         }
     ]
     build.patches = [
@@ -71,6 +80,7 @@ if __name__ == '__main__':
             'Boot': {
                 'ConsoleAttributes': 15,
                 'HideAuxiliary': True,
+                'LauncherOption': 'Full',
                 'PollAppleHotKeys': True,
                 'PickerMode': 'External',
                 'ShowPicker': True,
