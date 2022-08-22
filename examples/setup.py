@@ -18,17 +18,17 @@ if __name__ == '__main__':
         {
             'project': 'Lilu',
             'repo': 'acidanthera',
-            'version': '1.6.0'
+            'version': '1.6.2'
         },
         {
             'project': 'FeatureUnlock',
             'repo': 'acidanthera',
-            'version': '1.0.7'
+            'version': '1.0.9'
         },
         {
             'project': 'WhateverGreen',
             'repo': 'acidanthera',
-            'version': '1.5.8'
+            'version': '1.6.1'
         }
     ]
     build.write_tree()
@@ -51,7 +51,7 @@ if __name__ == '__main__':
         'Kernel': {
             'Quirks': {
                 'DisableLinkeditJettison': True,
-                'SetApfsTrimTimeout': 9999999
+                'SetApfsTrimTimeout': 0
             }
         },
         'Misc': {
@@ -93,12 +93,14 @@ if __name__ == '__main__':
                     'Arguments': '',
                     'Comment': '',
                     'Enabled': True,
+                    'LoadEarly': False,
                     'Path': 'OpenCanopy.efi'
                 },
                 {
                     'Arguments': '',
                     'Comment': '',
                     'Enabled': True,
+                    'LoadEarly': False,
                     'Path': 'OpenRuntime.efi'
                 }
             ],
