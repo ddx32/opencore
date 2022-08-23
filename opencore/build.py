@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from binascii import Error, unhexlify
-from collections import Mapping
+from collections.abc import Mapping
 from distutils.version import LooseVersion
 from glob import glob
 from io import BytesIO
