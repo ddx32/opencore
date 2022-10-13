@@ -314,7 +314,7 @@ class OpenCoreBuild:
                     'ReplaceTabWithSpace': False,
                     'Resolution': '',
                     'SanitiseClearScreen': False,
-                    'UIScale': -1,
+                    'UIScale': 0,
                     'TextRenderer': 'BuiltinGraphics',
                     'UgaPassThrough': False
                 },
@@ -357,7 +357,7 @@ class OpenCoreBuild:
                 'ReservedMemory': []
             }
         }
-        self.version = '0.8.3'
+        self.version = '0.8.5'
 
 
     def configure_kexts(self, kexts=[]):
