@@ -310,6 +310,7 @@ class OpenCoreBuild:
                     'ConsoleMode': '',
                     'DirectGopRendering': False,
                     'ForceResolution': False,
+                    'GopBurstMode': False,
                     'GopPassThrough': 'Disabled',
                     'IgnoreTextInGraphics': False,
                     'ProvideConsoleGop': False,
@@ -355,13 +356,14 @@ class OpenCoreBuild:
                     'ReloadOptionRoms': False,
                     'RequestBootVarRouting': False,
                     'ResizeGpuBars': -1,
+                    'ResizeUsePciRbIo': False,
                     'TscSyncTimeout': 0,
                     'UnblockFsConnect': False
                 },
                 'ReservedMemory': []
             }
         }
-        self.version = '0.8.8'
+        self.version = '0.9.1'
 
 
     def configure_kexts(self, kexts=[]):
