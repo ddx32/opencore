@@ -9,8 +9,8 @@ if __name__ == '__main__':
         {
             'project': 'ASPP-Override',
             'properties': {
-               'ExecutablePath': '',
-               'MinKernel': '21.4.0'
+                'ExecutablePath': '',
+                'MinKernel': '21.4.0'
             },
             'repo': 'dortania',
             'version': '1.0.1'
@@ -18,19 +18,19 @@ if __name__ == '__main__':
         {
             'project': 'Lilu',
             'repo': 'acidanthera',
-            'version': '1.6.2'
+            'version': '1.6.4'
         },
         {
             'project': 'FeatureUnlock',
             'repo': 'acidanthera',
-            'version': '1.0.9'
+            'version': '1.1.4'
         },
         {
             'project': 'WhateverGreen',
             'repo': 'acidanthera',
-            'version': '1.6.1'
+            'version': '1.6.4'
         },
-		{
+        {
             'project': 'NoAVXFSCompressionTypeZlib',
             'properties': {
                 'MinKernel': '21.5.0'
@@ -53,7 +53,8 @@ if __name__ == '__main__':
         'Kernel': {
             'Quirks': {
                 'DisableLinkeditJettison': True,
-                'SetApfsTrimTimeout': 0
+                'SetApfsTrimTimeout': 0,
+                'ThirdPartyDrives': True
             }
         },
         'Misc': {
@@ -62,7 +63,7 @@ if __name__ == '__main__':
                 'LauncherOption': 'Full',
                 'PollAppleHotKeys': True,
                 'PickerMode': 'External',
-				'PickerVariant': 'Default',
+                'PickerVariant': 'Default',
                 'ShowPicker': True,
                 'Timeout': 15
             },
@@ -76,28 +77,28 @@ if __name__ == '__main__':
         },
         'NVRAM': {
             'Add': {
-                '4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14': {
-                    'DefaultBackgroundColor': build.unhexlify('00 00 00 00'),
-                    'UIScale': build.unhexlify('02')
+                '7C436110-AB2A-4BBB-A880-FE41995C9F82': {
+                    'boot-args': '-no_compat_check'
                 }
             },
             'Delete': {
-                '4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14': [
-                    'DefaultBackgroundColor',
-                    'UIScale'
-                ]
+                '7C436110-AB2A-4BBB-A880-FE41995C9F82': ['boot-args']
             }
         },
         'PlatformInfo': {
+            'DataHub': {
+                'BoardProduct': 'Mac-27AD2F918AE68F61'
+            },
             'PlatformNVRAM': {
                 'FirmwareFeatures': build.unhexlify('03 54 0C C0 08 00 00 00'),
                 'FirmwareFeaturesMask': build.unhexlify('3F FF 1F FF 08 00 00 00')
             },
-			'SMBIOS': {
+            'SMBIOS': {
                 'BoardProduct': 'Mac-27AD2F918AE68F61'
             },
             'UpdateNVRAM': True,
-            'UpdateSMBIOS': True
+            'UpdateSMBIOS': True,
+            'UpdateDataHub': True
         },
         'UEFI': {
             'AppleInput': {
@@ -109,14 +110,14 @@ if __name__ == '__main__':
                     'Arguments': '',
                     'Comment': '',
                     'Enabled': True,
-					'LoadEarly': False,
+                    'LoadEarly': False,
                     'Path': 'OpenCanopy.efi'
                 },
                 {
                     'Arguments': '',
                     'Comment': '',
                     'Enabled': True,
-					'LoadEarly': False,
+                    'LoadEarly': False,
                     'Path': 'OpenRuntime.efi'
                 }
             ],
